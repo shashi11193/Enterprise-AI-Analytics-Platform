@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_incidents
+
+    columns:
+      - name: incident_id
+        tests:
+          - unique
+          - not_null
+
+      - name: severity
+        tests:
+          - accepted_values:
+              values:
+                - SEV1
+                - SEV2
+                - SEV3
+
+  - name: stg_tickets
+
+    columns:
+      - name: ticket_id
+        tests:
+          - unique
+          - not_null
+
+      - name: priority
+        tests:
+          - accepted_values:
+              values:
+                - Low
+                - Medium
+                - High

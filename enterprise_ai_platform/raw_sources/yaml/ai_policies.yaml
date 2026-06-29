@@ -1,0 +1,99 @@
+policies:
+  - policy_id: GOV-001
+    title: "AI Usage and Data Handling Policy"
+    owner: "AI Governance Team"
+    version: "1.0"
+    effective_date: "2026-01-01"
+
+    approved_use_cases:
+      - "Summarizing internal documentation"
+      - "Assisting customer support responses"
+      - "Generating analytics insights"
+      - "Internal knowledge search using LLM systems"
+
+    prohibited_use_cases:
+      - "Processing or storing raw PII without masking"
+      - "Generating legal or financial advice for external customers"
+      - "Using external LLM APIs without approval"
+      - "Training models on sensitive HR data"
+
+    data_classification_rules:
+      - classification: "PUBLIC"
+        description: "Non-sensitive internal documentation"
+      - classification: "INTERNAL"
+        description: "Operational dashboards and system docs"
+      - classification: "CONFIDENTIAL"
+        description: "Customer data, incidents, support tickets"
+      - classification: "RESTRICTED"
+        description: "PII, HR data, security credentials"
+
+    pii_handling:
+      - rule: "All PII must be masked before ingestion into analytics layer"
+      - rule: "No raw PII allowed in Gold layer datasets"
+      - rule: "Access to PII requires HR or Compliance role"
+
+    retention_policy:
+      - data_type: "logs"
+        retention_days: 90
+      - data_type: "support_tickets"
+        retention_days: 365
+      - data_type: "incidents"
+        retention_days: 730
+
+    model_evaluation_requirements:
+      - "All LLM outputs must pass relevance scoring"
+      - "Hallucination checks required for production outputs"
+      - "Human review required for SEV1-related summaries"
+
+    audit_logging:
+      enabled: true
+      fields_logged:
+        - user_id
+        - timestamp
+        - query
+        - model_response
+        - dataset_sources
+        - latency_ms
+
+  - policy_id: GOV-002
+    title: "Data Access and Governance Enforcement"
+    owner: "Platform Security Team"
+    version: "1.0"
+    effective_date: "2026-02-01"
+
+    access_control:
+      model: "RBAC"
+      enforcement_point: "API Gateway"
+
+    roles:
+      - role: "Admin"
+        permissions: ["read_all", "write_all", "manage_policies"]
+
+      - role: "Engineer"
+        permissions: ["read_product_data", "read_incidents", "read_docs"]
+
+      - role: "Analyst"
+        permissions: ["read_gold_layer"]
+
+      - role: "HR"
+        permissions: ["read_hr_data"]
+
+      - role: "Compliance"
+        permissions: ["read_audit_logs", "read_confidential"]
+
+    pii_policy:
+      masking_required: true
+      exceptions:
+        - role: "HR"
+        - role: "Compliance"
+
+    enforcement_rules:
+      - "All API requests must include authenticated user context"
+      - "Unauthorized access attempts must be logged"
+      - "Policy violations trigger SEV2 incident creation"
+
+    monitoring:
+      metrics:
+        - "unauthorized_access_attempts"
+        - "pii_masking_violations"
+        - "policy_evaluation_failures"

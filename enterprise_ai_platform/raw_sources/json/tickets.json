@@ -1,0 +1,833 @@
+[
+  {
+    "ticket_id": "TCK-2001",
+    "priority": "High",
+    "category": "Access Issue",
+    "requester": {
+      "user_id": "U-501",
+      "department": "Finance",
+      "role": "Analyst"
+    },
+    "description": "Unable to access reporting dashboard",
+    "comments": [
+      {
+        "author": "user",
+        "message": "Dashboard shows access denied error"
+      },
+      {
+        "author": "support",
+        "message": "Checking RBAC permissions"
+      },
+      {
+        "author": "support",
+        "message": "Issue resolved after role fix"
+      }
+    ],
+    "status": "Resolved",
+    "satisfaction_score": 4.5,
+    "created_at": "2026-05-02T10:00:00Z",
+    "resolved_at": "2026-05-02T11:30:00Z"
+  },
+  {
+    "ticket_id": "TCK-2002",
+    "priority": "Medium",
+    "category": "Data Issue",
+    "requester": {
+      "user_id": "U-342",
+      "department": "Sales",
+      "role": "Manager"
+    },
+    "description": "Mismatch in revenue dashboard numbers",
+    "comments": [
+      {
+        "author": "user",
+        "message": "Numbers differ from finance report"
+      },
+      {
+        "author": "support",
+        "message": "Investigating dbt transformation logic"
+      }
+    ],
+    "status": "In Progress",
+    "satisfaction_score": null,
+    "created_at": "2026-05-04T09:15:00Z",
+    "resolved_at": null
+  },
+  {
+    "ticket_id": "TCK-2003",
+    "priority": "Low",
+    "category": "Feature Request",
+    "requester": {
+      "user_id": "U-118",
+      "department": "Product",
+      "role": "PM"
+    },
+    "description": "Add export feature to reporting platform",
+    "comments": [
+      {
+        "author": "user",
+        "message": "Would help with monthly reporting"
+      }
+    ],
+    "status": "Open",
+    "satisfaction_score": null,
+    "created_at": "2026-05-06T12:00:00Z",
+    "resolved_at": null
+  }
+]
+[
+  {
+    "ticket_id": "TCK-2001",
+    "user_id": "U-1042",
+    "department": "Data Engineering",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Pipeline Failure",
+    "description": "Daily ingestion job failed due to schema mismatch in incident logs.",
+    "linked_incident": "INC-1019",
+    "created_at": "2026-05-19T06:50:00Z",
+    "resolved_at": "2026-05-19T07:35:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Data is not updating in dashboard since morning.",
+        "timestamp": "2026-05-19T06:50:00Z"
+      },
+      {
+        "author": "support_engineer",
+        "message": "We identified a schema mismatch in ingestion pipeline and are fixing it.",
+        "timestamp": "2026-05-19T07:05:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2002",
+    "user_id": "U-1101",
+    "department": "Analytics",
+    "priority": "Medium",
+    "status": "Resolved",
+    "issue_type": "Dashboard Mismatch",
+    "description": "Sales dashboard shows outdated metrics compared to source system.",
+    "linked_incident": "INC-1016",
+    "created_at": "2026-05-16T09:10:00Z",
+    "resolved_at": "2026-05-16T10:40:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Numbers do not match with expected revenue.",
+        "timestamp": "2026-05-16T09:10:00Z"
+      },
+      {
+        "author": "analytics_engineer",
+        "message": "Root cause identified: dbt incremental model watermark issue.",
+        "timestamp": "2026-05-16T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2003",
+    "user_id": "U-1188",
+    "department": "Security",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Authentication Failure",
+    "description": "Users intermittently unable to login due to token validation errors.",
+    "linked_incident": "INC-1012",
+    "created_at": "2026-05-12T09:05:00Z",
+    "resolved_at": "2026-05-12T10:50:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Login fails randomly across multiple systems.",
+        "timestamp": "2026-05-12T09:05:00Z"
+      },
+      {
+        "author": "security_team",
+        "message": "Issue caused by JWT key rotation propagation delay.",
+        "timestamp": "2026-05-12T09:40:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2004",
+    "user_id": "U-1210",
+    "department": "AI Platform",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Search Degradation",
+    "description": "Search results are irrelevant after recent model update.",
+    "linked_incident": "INC-1013",
+    "created_at": "2026-05-13T07:20:00Z",
+    "resolved_at": "2026-05-13T10:00:00Z",
+    "satisfaction_score": 3,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Search quality has dropped significantly.",
+        "timestamp": "2026-05-13T07:20:00Z"
+      },
+      {
+        "author": "ai_engineer",
+        "message": "Embedding drift identified due to model upgrade.",
+        "timestamp": "2026-05-13T08:30:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2005",
+    "user_id": "U-1302",
+    "department": "Governance",
+    "priority": "Critical",
+    "status": "Resolved",
+    "issue_type": "Policy Enforcement Failure",
+    "description": "Restricted data classification rules not being applied correctly.",
+    "linked_incident": "INC-1015",
+    "created_at": "2026-05-15T11:00:00Z",
+    "resolved_at": "2026-05-15T11:30:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Policy rules seem broken for restricted datasets.",
+        "timestamp": "2026-05-15T11:00:00Z"
+      },
+      {
+        "author": "governance_team",
+        "message": "Fixed YAML parsing bug in policy engine.",
+        "timestamp": "2026-05-15T11:20:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2006",
+    "user_id": "U-1408",
+    "department": "Data Engineering",
+    "priority": "Medium",
+    "status": "Resolved",
+    "issue_type": "ETL Duplication",
+    "description": "Duplicate ticket records appearing in analytics dashboard.",
+    "linked_incident": "INC-1014",
+    "created_at": "2026-05-14T10:40:00Z",
+    "resolved_at": "2026-05-14T12:10:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Seeing duplicate entries in reports.",
+        "timestamp": "2026-05-14T10:40:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Root cause: recursive flattening bug in ETL pipeline.",
+        "timestamp": "2026-05-14T11:30:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2007",
+    "user_id": "U-1501",
+    "department": "Search",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Latency Issue",
+    "description": "Search API response time increased significantly during peak hours.",
+    "linked_incident": "INC-1018",
+    "created_at": "2026-05-18T10:00:00Z",
+    "resolved_at": "2026-05-18T12:20:00Z",
+    "satisfaction_score": 3,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Search is extremely slow today.",
+        "timestamp": "2026-05-18T10:00:00Z"
+      },
+      {
+        "author": "platform_engineer",
+        "message": "Issue caused by inefficient vector joins in DuckDB.",
+        "timestamp": "2026-05-18T11:10:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2008",
+    "user_id": "U-1603",
+    "department": "Ingestion",
+    "priority": "Critical",
+    "status": "Resolved",
+    "issue_type": "Pipeline Outage",
+    "description": "Data ingestion pipeline completely stopped processing new records.",
+    "linked_incident": "INC-1019",
+    "created_at": "2026-05-19T06:55:00Z",
+    "resolved_at": "2026-05-19T07:30:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "No new data is coming into the system.",
+        "timestamp": "2026-05-19T06:55:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Schema validation failure caused pipeline crash.",
+        "timestamp": "2026-05-19T07:10:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2009",
+    "user_id": "U-1704",
+    "department": "Observability",
+    "priority": "Low",
+    "status": "Resolved",
+    "issue_type": "Alert Noise",
+    "description": "Too many false alerts being triggered by monitoring system.",
+    "linked_incident": "INC-1020",
+    "created_at": "2026-05-20T12:10:00Z",
+    "resolved_at": "2026-05-20T16:30:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Getting spammed with alerts.",
+        "timestamp": "2026-05-20T12:10:00Z"
+      },
+      {
+        "author": "sre",
+        "message": "Adjusted anomaly detection thresholds.",
+        "timestamp": "2026-05-20T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2010",
+    "user_id": "U-1809",
+    "department": "AI Governance",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Policy Evaluation Bug",
+    "description": "Restricted classification not being enforced consistently.",
+    "linked_incident": "INC-1025",
+    "created_at": "2026-05-25T11:05:00Z",
+    "resolved_at": "2026-05-25T11:40:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Why are restricted datasets accessible?",
+        "timestamp": "2026-05-25T11:05:00Z"
+      },
+      {
+        "author": "governance_engineer",
+        "message": "Cache bug in policy evaluation layer identified.",
+        "timestamp": "2026-05-25T11:25:00Z"
+      }
+    ]
+  }
+]
+[
+  {
+    "ticket_id": "TCK-2011",
+    "user_id": "U-1901",
+    "department": "Data Engineering",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Pipeline Delay",
+    "description": "Ingestion latency caused delayed dashboard refresh.",
+    "linked_incident": "INC-1008",
+    "created_at": "2026-05-08T10:10:00Z",
+    "resolved_at": "2026-05-08T12:05:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Dashboard is not updating in real time.",
+        "timestamp": "2026-05-08T10:10:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Airflow DAG delay identified.",
+        "timestamp": "2026-05-08T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2012",
+    "user_id": "U-2002",
+    "department": "Analytics",
+    "priority": "Medium",
+    "status": "Resolved",
+    "issue_type": "Metric Mismatch",
+    "description": "Revenue numbers inconsistent across dashboards.",
+    "linked_incident": "INC-1011",
+    "created_at": "2026-05-11T08:15:00Z",
+    "resolved_at": "2026-05-11T08:40:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Different dashboards show different revenue.",
+        "timestamp": "2026-05-11T08:15:00Z"
+      },
+      {
+        "author": "analytics_engineer",
+        "message": "dbt dependency chain failure identified.",
+        "timestamp": "2026-05-11T08:25:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2013",
+    "user_id": "U-2103",
+    "department": "Security",
+    "priority": "High",
+    "status": "Escalated",
+    "issue_type": "Authentication Failure",
+    "description": "Intermittent login failures affecting multiple regions.",
+    "linked_incident": "INC-1023",
+    "created_at": "2026-05-23T10:20:00Z",
+    "resolved_at": null,
+    "satisfaction_score": null,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Cannot log in consistently.",
+        "timestamp": "2026-05-23T10:20:00Z"
+      },
+      {
+        "author": "security_team",
+        "message": "Investigating token validation service overload.",
+        "timestamp": "2026-05-23T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2014",
+    "user_id": "U-2204",
+    "department": "AI Platform",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Search Quality Drop",
+    "description": "Search results became irrelevant after model update.",
+    "linked_incident": "INC-1024",
+    "created_at": "2026-05-24T07:30:00Z",
+    "resolved_at": "2026-05-24T09:50:00Z",
+    "satisfaction_score": 3,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Search is not returning useful results.",
+        "timestamp": "2026-05-24T07:30:00Z"
+      },
+      {
+        "author": "ai_engineer",
+        "message": "Embedding drift confirmed.",
+        "timestamp": "2026-05-24T08:20:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2015",
+    "user_id": "U-2305",
+    "department": "Governance",
+    "priority": "Critical",
+    "status": "Resolved",
+    "issue_type": "Policy Enforcement Failure",
+    "description": "Restricted datasets accessible due to governance bug.",
+    "linked_incident": "INC-1025",
+    "created_at": "2026-05-25T11:00:00Z",
+    "resolved_at": "2026-05-25T11:30:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Restricted data is visible.",
+        "timestamp": "2026-05-25T11:00:00Z"
+      },
+      {
+        "author": "governance_team",
+        "message": "Fixed YAML cache evaluation bug.",
+        "timestamp": "2026-05-25T11:15:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2016",
+    "user_id": "U-2406",
+    "department": "Data Engineering",
+    "priority": "Medium",
+    "status": "Resolved",
+    "issue_type": "Duplicate Records",
+    "description": "Duplicate tickets appearing in analytics layer.",
+    "linked_incident": "INC-1026",
+    "created_at": "2026-05-26T10:10:00Z",
+    "resolved_at": "2026-05-26T11:50:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "I see duplicated records in reports.",
+        "timestamp": "2026-05-26T10:10:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Flattening logic fixed with depth-aware parsing.",
+        "timestamp": "2026-05-26T11:10:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2017",
+    "user_id": "U-2507",
+    "department": "Search",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Latency Spike",
+    "description": "Search API latency increased during peak load.",
+    "linked_incident": "INC-1028",
+    "created_at": "2026-05-28T10:05:00Z",
+    "resolved_at": "2026-05-28T12:20:00Z",
+    "satisfaction_score": 3,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Search is extremely slow.",
+        "timestamp": "2026-05-28T10:05:00Z"
+      },
+      {
+        "author": "platform_engineer",
+        "message": "DuckDB join bottleneck identified.",
+        "timestamp": "2026-05-28T11:15:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2018",
+    "user_id": "U-2608",
+    "department": "Ingestion",
+    "priority": "Critical",
+    "status": "Resolved",
+    "issue_type": "Pipeline Outage",
+    "description": "Entire ingestion pipeline stopped processing new events.",
+    "linked_incident": "INC-1029",
+    "created_at": "2026-05-29T07:05:00Z",
+    "resolved_at": "2026-05-29T07:40:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "No data is flowing into system.",
+        "timestamp": "2026-05-29T07:05:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Schema mismatch between YAML governance and ingestion layer.",
+        "timestamp": "2026-05-29T07:20:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2019",
+    "user_id": "U-2709",
+    "department": "Observability",
+    "priority": "Low",
+    "status": "Resolved",
+    "issue_type": "Alert Noise",
+    "description": "Monitoring system generating excessive false alerts.",
+    "linked_incident": "INC-1030",
+    "created_at": "2026-05-30T12:05:00Z",
+    "resolved_at": "2026-05-30T16:10:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Alerts are too noisy.",
+        "timestamp": "2026-05-30T12:05:00Z"
+      },
+      {
+        "author": "sre",
+        "message": "Switched to anomaly-based alerting model.",
+        "timestamp": "2026-05-30T15:30:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2020",
+    "user_id": "U-2801",
+    "department": "AI Governance",
+    "priority": "High",
+    "status": "Escalated",
+    "issue_type": "Policy Evaluation Bug",
+    "description": "Policy engine intermittently failing to classify restricted content.",
+    "linked_incident": "INC-1021",
+    "created_at": "2026-05-21T08:05:00Z",
+    "resolved_at": null,
+    "satisfaction_score": null,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Governance rules not consistently applied.",
+        "timestamp": "2026-05-21T08:05:00Z"
+      },
+      {
+        "author": "governance_engineer",
+        "message": "Investigating schema propagation issue.",
+        "timestamp": "2026-05-21T08:25:00Z"
+      }
+    ]
+  }
+]
+[
+  {
+    "ticket_id": "TCK-2021",
+    "user_id": "U-3001",
+    "department": "Data Engineering",
+    "priority": "High",
+    "status": "Escalated",
+    "issue_type": "Pipeline Instability",
+    "description": "Intermittent failures in ingestion pipeline causing missing records.",
+    "linked_incident": "INC-1021",
+    "created_at": "2026-05-21T08:00:00Z",
+    "resolved_at": null,
+    "satisfaction_score": null,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Some records are missing from reports.",
+        "timestamp": "2026-05-21T08:00:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Investigating schema corruption in ingestion layer.",
+        "timestamp": "2026-05-21T08:30:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2022",
+    "user_id": "U-3002",
+    "department": "Analytics",
+    "priority": "Medium",
+    "status": "Resolved",
+    "issue_type": "Metric Drift",
+    "description": "Revenue metrics inconsistent after dbt model update.",
+    "linked_incident": "INC-1022",
+    "created_at": "2026-05-22T09:10:00Z",
+    "resolved_at": "2026-05-22T10:30:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Numbers changed overnight.",
+        "timestamp": "2026-05-22T09:10:00Z"
+      },
+      {
+        "author": "analytics_engineer",
+        "message": "Dependency graph issue in dbt pipeline.",
+        "timestamp": "2026-05-22T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2023",
+    "user_id": "U-3003",
+    "department": "Security",
+    "priority": "High",
+    "status": "Escalated",
+    "issue_type": "Token Validation Failure",
+    "description": "Authentication failures across multiple services.",
+    "linked_incident": "INC-1023",
+    "created_at": "2026-05-23T10:10:00Z",
+    "resolved_at": null,
+    "satisfaction_score": null,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Cannot access platform intermittently.",
+        "timestamp": "2026-05-23T10:10:00Z"
+      },
+      {
+        "author": "security_team",
+        "message": "Investigating token service overload.",
+        "timestamp": "2026-05-23T10:45:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2024",
+    "user_id": "U-3004",
+    "department": "AI Platform",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Search Regression",
+    "description": "Search relevance dropped after embedding update.",
+    "linked_incident": "INC-1024",
+    "created_at": "2026-05-24T07:10:00Z",
+    "resolved_at": "2026-05-24T09:30:00Z",
+    "satisfaction_score": 3,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Search results are not relevant anymore.",
+        "timestamp": "2026-05-24T07:10:00Z"
+      },
+      {
+        "author": "ai_engineer",
+        "message": "Embedding model drift confirmed.",
+        "timestamp": "2026-05-24T08:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2025",
+    "user_id": "U-3005",
+    "department": "Governance",
+    "priority": "Critical",
+    "status": "Resolved",
+    "issue_type": "Policy Enforcement Failure",
+    "description": "Restricted classification rules not enforced correctly.",
+    "linked_incident": "INC-1025",
+    "created_at": "2026-05-25T11:05:00Z",
+    "resolved_at": "2026-05-25T11:30:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Restricted data is accessible.",
+        "timestamp": "2026-05-25T11:05:00Z"
+      },
+      {
+        "author": "governance_team",
+        "message": "Fixed policy caching bug.",
+        "timestamp": "2026-05-25T11:20:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2026",
+    "user_id": "U-3006",
+    "department": "Data Engineering",
+    "priority": "Medium",
+    "status": "Resolved",
+    "issue_type": "Duplicate Records",
+    "description": "Duplicate rows appearing in analytics dataset.",
+    "linked_incident": "INC-1026",
+    "created_at": "2026-05-26T10:00:00Z",
+    "resolved_at": "2026-05-26T11:45:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Duplicates in report output.",
+        "timestamp": "2026-05-26T10:00:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Flattening bug fixed with depth-aware logic.",
+        "timestamp": "2026-05-26T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2027",
+    "user_id": "U-3007",
+    "department": "Search",
+    "priority": "High",
+    "status": "Resolved",
+    "issue_type": "Latency Spike",
+    "description": "Search API slow under peak load.",
+    "linked_incident": "INC-1028",
+    "created_at": "2026-05-28T10:00:00Z",
+    "resolved_at": "2026-05-28T12:10:00Z",
+    "satisfaction_score": 3,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Search is very slow.",
+        "timestamp": "2026-05-28T10:00:00Z"
+      },
+      {
+        "author": "platform_engineer",
+        "message": "DuckDB join optimization needed.",
+        "timestamp": "2026-05-28T11:10:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2028",
+    "user_id": "U-3008",
+    "department": "Ingestion",
+    "priority": "Critical",
+    "status": "Resolved",
+    "issue_type": "Pipeline Outage",
+    "description": "Complete ingestion pipeline failure due to schema mismatch.",
+    "linked_incident": "INC-1029",
+    "created_at": "2026-05-29T07:00:00Z",
+    "resolved_at": "2026-05-29T07:35:00Z",
+    "satisfaction_score": 5,
+    "comments": [
+      {
+        "author": "user",
+        "message": "No new data coming in.",
+        "timestamp": "2026-05-29T07:00:00Z"
+      },
+      {
+        "author": "data_engineer",
+        "message": "Schema mismatch fixed across ingestion layer.",
+        "timestamp": "2026-05-29T07:20:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2029",
+    "user_id": "U-3009",
+    "department": "Observability",
+    "priority": "Low",
+    "status": "Resolved",
+    "issue_type": "Alert Noise",
+    "description": "Too many false alerts triggered by monitoring system.",
+    "linked_incident": "INC-1030",
+    "created_at": "2026-05-30T12:00:00Z",
+    "resolved_at": "2026-05-30T16:00:00Z",
+    "satisfaction_score": 4,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Alerts are noisy.",
+        "timestamp": "2026-05-30T12:00:00Z"
+      },
+      {
+        "author": "sre",
+        "message": "Switched to anomaly-based alerting.",
+        "timestamp": "2026-05-30T15:10:00Z"
+      }
+    ]
+  },
+  {
+    "ticket_id": "TCK-2030",
+    "user_id": "U-3010",
+    "department": "AI Governance",
+    "priority": "High",
+    "status": "Escalated",
+    "issue_type": "Policy Evaluation Failure",
+    "description": "Governance rules intermittently failing to enforce restrictions.",
+    "linked_incident": "INC-1027",
+    "created_at": "2026-05-27T06:45:00Z",
+    "resolved_at": null,
+    "satisfaction_score": null,
+    "comments": [
+      {
+        "author": "user",
+        "message": "Policy enforcement inconsistent.",
+        "timestamp": "2026-05-27T06:45:00Z"
+      },
+      {
+        "author": "governance_engineer",
+        "message": "Investigating PDF parsing impact on policy engine.",
+        "timestamp": "2026-05-27T07:10:00Z"
+      }
+    ]
+  }
+]
